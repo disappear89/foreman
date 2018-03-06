@@ -36,7 +36,7 @@ else
     end
     Bundler.require(*Rails.groups)
     if SETTINGS[:unattended]
-      %w[ec2 fog gce libvirt openstack ovirt rackspace vmware].each do |group|
+      %w[ec2 fog gce openstack ovirt rackspace vmware].each do |group|
         begin
           Bundler.require(group)
         rescue LoadError
